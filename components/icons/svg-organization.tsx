@@ -1,0 +1,18 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgOrganization = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={50}
+    height={50}
+    viewBox="0 0 48 48"
+    {...props}
+  >
+    <path fill="#90CAF9" d="M42 42H6V10c0-2.2 1.8-4 4-4h28c2.2 0 4 1.8 4 4z" />
+    <path fill="#64B5F6" d="M6 42h36v2H6z" />
+    <g fill="#1565C0">
+      <path d="M31 27h6v5h-6zM21 27h6v5h-6zM11 27h6v5h-6zM31 35h6v5h-6zM11 35h6v5h-6zM31 19h6v5h-6zM21 19h6v5h-6zM11 19h6v5h-6zM31 11h6v5h-6zM21 11h6v5h-6zM11 11h6v5h-6zM21 35h6v9h-6z" />
+    </g>
+  </svg>
+);
+export default SvgOrganization;
