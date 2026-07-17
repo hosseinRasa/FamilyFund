@@ -1,6 +1,6 @@
 "use client";
 import { PlusCircleFilled } from "@ant-design/icons";
-import SvgDie from "../icons/Die";
+import SvgDie from "../icons/svg-die";
 import { useState } from "react";
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
       </span>
       <span className="grid cursor-pointer place-items-center -mt-11 ">
         <SvgDie
-          onClick={() => 
+          onClick={() =>
             animate === "none"
               ? setAnimate("animate-[spin_1s_linear_1]")
               : setAnimate("none")

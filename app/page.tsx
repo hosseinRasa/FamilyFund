@@ -3,10 +3,10 @@ import ImageSlider from "@/components/client-side/image-slider";
 import MenuItem from "@/components/client-side/menu-itme";
 import MiddleInfo from "@/components/client-side/middle-info";
 import SideMenu from "@/components/client-side/side-menu";
-import SvgDie from "@/components/icons/Die";
-import SvgLoan from "@/components/icons/Loan";
-import SvgOrganization from "@/components/icons/Organization";
-import SvgPerson from "@/components/icons/Person";
+import SvgDie from "@/components/icons/svg-die";
+import SvgLoan from "@/components/icons/svg-loan";
+import SvgOrganization from "@/components/icons/svg-organization";
+import SvgPerson from "@/components/icons/svg-person";
 
 export default function Home() {
   return (
@@ -23,10 +23,13 @@ export default function Home() {
           className="bg-gray-100 p-2 rounded-2xl w-full
         h-full flex flex-row flex-wrap gap-5 justify-around overflow-auto "
         >
-          <MenuItem icon={<SvgOrganization  />} title="تعریف موسسه" />
+          <MenuItem icon={<SvgOrganization />} title="تعریف موسسه" />
           <MenuItem icon={<SvgLoan />} title="تعریف وام" />
           <MenuItem icon={<SvgPerson />} title="تعریف اشخاص" />
-          <MenuItem icon={<SvgDie className="animate-[spin_2s_linear_infinite]" />} title="نتایج قرعه کشی" />
+          <MenuItem
+            icon={<SvgDie className="animate-[spin_2s_linear_infinite]" />}
+            title="نتایج قرعه کشی"
+          />
         </div>
       </main>
       <footer className="h-20 p-2  sticky bottom-0 text-black bg-white">
