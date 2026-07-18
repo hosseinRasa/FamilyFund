@@ -6,7 +6,9 @@ import { useState } from "react";
 const Footer = () => {
   const [animate, setAnimate] = useState<string>("none");
   return (
-    <div className="flex flex-row flex-nowrap justify-around">
+<footer className="h-20 p-2  sticky bottom-0 text-black bg-white">
+         
+<div className="flex flex-row flex-nowrap justify-around">
       <span className="grid cursor-pointer ">
         <PlusCircleFilled />
         <small>خانه</small>
@@ -36,6 +38,7 @@ const Footer = () => {
         <small>خانه</small>
       </span>
     </div>
+    </footer>
   );
 };
 

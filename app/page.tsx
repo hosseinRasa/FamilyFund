@@ -7,14 +7,14 @@ import SvgDie from "@/components/icons/svg-die";
 import SvgLoan from "@/components/icons/svg-loan";
 import SvgOrganization from "@/components/icons/svg-organization";
 import SvgPerson from "@/components/icons/svg-person";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-full ">
-      <header>
-        <SideMenu />
-        <ImageSlider />
-      </header>
+    // <div className="flex flex-col h-full ">
+    //   <SideMenu />
+    <div>
+    <ImageSlider />
 
       {/* <h1 className="text-blue-500 pr-4 pt-0">خبر فوری : تمامی مراحل فوق ...</h1> */}
       <main className=" bg-linear-to-r flex flex-col from-pink-300 h-9/12 to-red-400 rounded-2xl">
@@ -25,16 +25,17 @@ export default function Home() {
         >
           <MenuItem icon={<SvgOrganization />} title="تعریف موسسه" />
           <MenuItem icon={<SvgLoan />} title="تعریف وام" />
-          <MenuItem icon={<SvgPerson />} title="تعریف اشخاص" />
+          <Link href={"/users"}>
+            {" "}
+            <MenuItem icon={<SvgPerson />} title="تعریف اشخاص" />
+          </Link>
           <MenuItem
             icon={<SvgDie className="animate-[spin_2s_linear_infinite]" />}
             title="نتایج قرعه کشی"
           />
         </div>
       </main>
-      <footer className="h-20 p-2  sticky bottom-0 text-black bg-white">
-        <Footer />
-      </footer>
+      <Footer />
     </div>
   );
 }
