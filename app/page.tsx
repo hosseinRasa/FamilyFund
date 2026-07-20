@@ -1,8 +1,6 @@
-import Footer from "@/components/client-side/footer";
 import ImageSlider from "@/components/client-side/image-slider";
 import MenuItem from "@/components/client-side/menu-itme";
 import MiddleInfo from "@/components/client-side/middle-info";
-import SideMenu from "@/components/client-side/side-menu";
 import SvgDie from "@/components/icons/svg-die";
 import SvgLoan from "@/components/icons/svg-loan";
 import SvgOrganization from "@/components/icons/svg-organization";
@@ -11,17 +9,14 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    // <div className="flex flex-col h-full ">
-    //   <SideMenu />
-    <div>
-    <ImageSlider />
+    <>
+      <ImageSlider />
 
-      {/* <h1 className="text-blue-500 pr-4 pt-0">خبر فوری : تمامی مراحل فوق ...</h1> */}
-      <main className=" bg-linear-to-r flex flex-col from-pink-300 h-9/12 to-red-400 rounded-2xl">
+      <main className="flex-1 min-h-0 bg-linear-to-r flex flex-col from-pink-300 to-red-400 rounded-2xl">
         <MiddleInfo />
         <div
           className="bg-gray-100 p-2 rounded-2xl w-full
-        h-full flex flex-row flex-wrap gap-5 justify-around overflow-auto "
+         flex flex-1 flex-wrap gap-1 justify-around overflow-auto min-h-0"
         >
           <MenuItem icon={<SvgOrganization />} title="تعریف موسسه" />
           <MenuItem icon={<SvgLoan />} title="تعریف وام" />
@@ -35,7 +30,6 @@ export default function Home() {
           />
         </div>
       </main>
-      <Footer />
-    </div>
+    </>
   );
 }

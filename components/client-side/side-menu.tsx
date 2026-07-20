@@ -41,7 +41,7 @@ const SideMenu = () => {
         onClick={() => setOpen((prev) => !prev)}
         type="text"
         icon={<MenuOutlined />}
-        className="fixed! z-500 bg-white! "
+        className="  "
       />
       <Drawer
         closeIcon={""}
@@ -61,7 +61,7 @@ const SideMenu = () => {
         placement="right"
         open={open}
         onClose={() => setOpen(false)}
-        classNames={{ body: "p-0!", header: "bg-green-200" }}
+        classNames={{ body: "p-0!", header: "bg-linear-to-r  from-pink-300 to-red-400" }}
         className={`w-3/4! md:w-full! ${yekan.className} `}
       >
         <Menu items={items} className={`w-full ${yekan.className} `} />

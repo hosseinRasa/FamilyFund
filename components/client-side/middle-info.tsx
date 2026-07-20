@@ -4,7 +4,7 @@ import React from "react";
 
 const MiddleInfo = () => {
   return (
-    <div className="p-2 h-1/4 flex flex-row w-full justify-around">
+    <div className="p-2  flex flex-row w-full justify-around">
       <div className="flex  flex-row justify-start items-center gap-2  md:gap-5">
         <HomeOutlined className="text-4xl"/>
         <ul>
