@@ -18,16 +18,22 @@ export default function Home() {
           className="bg-gray-100 p-2 rounded-tl-2xl rounded-tr-2xl w-full
          flex flex-1 flex-wrap gap-1 justify-around overflow-auto min-h-0"
         >
-          <MenuItem icon={<SvgOrganization />} title="تعریف موسسه" />
-          <MenuItem icon={<SvgLoan />} title="تعریف وام" />
+          <Link href={"/organizations"}>
+            <MenuItem icon={<SvgOrganization />} title="تعریف موسسه" />
+          </Link>
+          <Link href={"/loans"}>
+            <MenuItem icon={<SvgLoan />} title="تعریف وام" />
+          </Link>
           <Link href={"/users"}>
             {" "}
             <MenuItem icon={<SvgPerson />} title="تعریف اشخاص" />
           </Link>
-          <MenuItem
-            icon={<SvgDie className="animate-[spin_2s_linear_infinite]" />}
-            title="نتایج قرعه کشی"
-          />
+          <Link href={"/lotteries"}>
+            <MenuItem
+              icon={<SvgDie className="animate-[spin_2s_linear_infinite]" />}
+              title="نتایج قرعه کشی"
+            />
+          </Link>
         </div>
       </main>
     </>

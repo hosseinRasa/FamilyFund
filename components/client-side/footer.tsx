@@ -8,6 +8,7 @@ import {
 import SvgDie from "../icons/svg-die";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
   const router = useRouter();
@@ -16,13 +17,17 @@ const Footer = () => {
   return (
     <footer className="h-15 p-2 w-full sticky bottom-0 text-black bg-white">
       <div className="flex flex-row flex-nowrap justify-around">
-        <span className="flex flex-col items-center cursor-pointer ">
-          <HomeOutlined onClick={() => router.push('/')} />
-          <small>خانه</small>
-        </span>
-        <span className=" cursor-pointer flex flex-col items-center ">
-          <ApartmentOutlined /> <small>موسسه</small>
-        </span>
+        <Link href={"/"}>
+          <span className="flex flex-col items-center cursor-pointer ">
+            <HomeOutlined />
+            <small>خانه</small>
+          </span>
+        </Link>
+        <Link href={"/organizations"}>
+          <span className=" cursor-pointer flex flex-col items-center ">
+            <ApartmentOutlined /> <small>موسسه</small>
+          </span>
+        </Link>
         <span className="  cursor-pointer flex flex-col items-center -mt-11 ">
           <SvgDie
             onClick={() =>
@@ -35,13 +40,17 @@ const Footer = () => {
           />
           {/* <small>خانه</small> */}
         </span>
-        <span className="flex flex-col items-center cursor-pointer ">
-          <MoneyCollectOutlined />
-          <small>وام</small>
-        </span>
-        <span className="flex flex-col items-center cursor-pointer ">
-          <TeamOutlined /> <small>اشخاص</small>
-        </span>
+        <Link href={"/loans"}>
+          <span className="flex flex-col items-center cursor-pointer ">
+            <MoneyCollectOutlined />
+            <small>وام</small>
+          </span>
+        </Link>
+        <Link href={"/users"}>
+          <span className="flex flex-col items-center cursor-pointer ">
+            <TeamOutlined /> <small>اشخاص</small>
+          </span>
+        </Link>
       </div>
     </footer>
   );

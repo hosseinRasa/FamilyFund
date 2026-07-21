@@ -44,6 +44,7 @@ const SideMenu = () => {
         className="  "
       />
       <Drawer
+      
         closeIcon={""}
         title={
           <figure className="text-center w-full grid place-content-center pl-7 text-gray-600">

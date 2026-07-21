@@ -11,10 +11,11 @@ interface Props {
   id: number;
   title: string;
   children: React.ReactNode;
+  baseUrl: string;
 }
-export default function ItemCard({ id, title, children }: Props) {
+export default function ItemCard({ id, title, children, baseUrl }: Props) {
   return (
-    <Link href={`users/${id}`}>
+    <Link href={`${baseUrl}/${id}`}>
       <Card
         title={title}
         className="w-full border-b-green-200! border-b-2! mb-2!"
