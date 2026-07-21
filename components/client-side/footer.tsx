@@ -35,7 +35,7 @@ const Footer = () => {
           />
           {/* <small>خانه</small> */}
         </span>
-        <span className="flex flex-col items-center cursor-pointer text-lg">
+        <span className="flex flex-col items-center cursor-pointer ">
           <MoneyCollectOutlined />
           <small>وام</small>
         </span>

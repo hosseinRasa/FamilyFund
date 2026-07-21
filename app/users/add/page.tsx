@@ -1,11 +1,15 @@
 import SubPage from "@/components/client-side/sub-page";
 import { use } from "react";
 
-export default function View({ params }: { params: Promise<{ id: string }> }) {
+export default function Delete({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = use(params); // unwrap the Promise
 
   return (
-    <SubPage title="اطلاعات کاربر" navigationButtons={['edit', 'delete']} baseUrl="users" id={id}>
+    <SubPage title="افزودن کاربر" navigationButtons={['save']} baseUrl="users" id="">
       <h2>کاربر شماره {id}</h2>
       <p>این یک مودال نمونه است.</p>
     </SubPage>

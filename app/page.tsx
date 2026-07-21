@@ -15,7 +15,7 @@ export default function Home() {
       <main className="flex-1 min-h-0 bg-linear-to-r flex flex-col from-pink-300 to-red-400 rounded-2xl">
         <MiddleInfo />
         <div
-          className="bg-gray-100 p-2 rounded-2xl w-full
+          className="bg-gray-100 p-2 rounded-tl-2xl rounded-tr-2xl w-full
          flex flex-1 flex-wrap gap-1 justify-around overflow-auto min-h-0"
         >
           <MenuItem icon={<SvgOrganization />} title="تعریف موسسه" />

@@ -16,17 +16,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fa"
-      dir="rtl"
-      className={`h-full ${yekan.className}!`}
-    >
-      <body className={`h-full col flex flex-col  text-white  ${yekan.className}`}>
-          <Header />
-        <ConfigProvider  locale={faIR} direction="rtl">
+    <html lang="fa" dir="rtl" className={`h-full ${yekan.className}!`}>
+      <body
+        className={`h-full mx-auto bg-white md:bg-gray-400 w-full md:w-1/2 col flex flex-col  text-white  ${yekan.className}`}
+      >
+        <Header />
+        <ConfigProvider locale={faIR} direction="rtl">
           <div className=" flex flex-col flex-1">{children}</div>
         </ConfigProvider>
-          <Footer />
+        <Footer />
       </body>
     </html>
   );

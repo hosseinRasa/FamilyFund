@@ -44,3 +44,10 @@
 body, html{
   overflow: none;
 }
+
+.ant-card {
+  font-family: var(--font-yekan);
+}
+.ant-card-head-title {
+  font-family: var(--font-yekan);
+} 
